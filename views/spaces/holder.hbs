@@ -1,0 +1,97 @@
+{{!-- <h2>Mentee-Space</h2>
+
+{{#if user}}
+<div>
+  <img src="{{user.imgPath}}" </div> <div>
+  {{!-- <a href="/common-space">Common Space</a>
+  <br> --}}
+<a href="/mentee-edit">Update your profile</a>
+<br>
+<a href="/logout">Logout</a>
+
+
+</div>
+
+<label for="username">Hello {{user.name}} </label>
+<br><br>
+<label for="professionalField-input">Professional Field {{user.professionalField}} </label>
+<br><br>
+<label for="name">Name {{user.name}} </label>
+<br><br>
+<label for="surname">Surname {{user.surname}} </label>
+<br><br>
+<label for="country">Country {{user.country}} </label>
+<br><br>
+<label for="city">City {{user.city}} </label>
+<br><br>
+<label for="phone">Phone Number {{user.phone}} </label>
+<br><br>
+<label for="email">Email {{user.email}} </label>
+<br><br>
+<label for="position-input">Position {{user.position}} </label>
+<br>
+<label for="bioDescription-input">Your Bio {{user.bioDescription}} </label>
+<br>
+
+
+
+{{#each jobs}}
+<p>{{title}}</p>
+<p>{{company}}</p>
+<a href="{{url}}"><img src={{company_logo}}></a>
+{{/each}}
+
+<form method="GET" action="/mentee-space">
+    <button type="submit"> View other Jobs</button>
+</form>
+
+
+{{#each mentors }}
+<label for="username"> {{username}} </label>
+<br><br>
+<label for="name">Name {{name}} </label>
+<br><br>
+<label for="position-input">Position {{position}} </label>
+<br><br>
+{{!-- <label for="email">Email {{email}} </label>
+<br><br> --}}
+{{!-- <a href="/mentor/{{id}}">Check out your Mentor</a>
+{{/each}}
+
+{{/if}} --}} --}}
+
+
+
+
+{{!-- <h1>Get in touch with your Mentee!</h1>
+
+<h2>{{user.name}}</h2>
+<h2>{{user.professionalField}}</h2>
+<h2>{{user.position}}</h2>
+<h2>{{user.email}}</h2>
+<h2>{{user.bioDescription}}</h2>
+{{!-- <p>{{user._id}}</p> --}}
+
+
+
+<div class="d-flex align-items-around " id="display">
+
+    {{#with user }}
+
+    <div class="d-flex flex-column align-items-around" id="user-display">
+        <div class="p-2"><img src="{{imgPath}}" id="display-image" id="image-container-round"
+                class="border border-dark hover2" width="70%">
+        </div>
+        <div class="p-2"><label for="name">Name: {{name}} {{surname}} </label></div>
+        <div class="p-2"><label for="position-input">Position: {{position}} </label></div>
+        <div class="p-2"><label for="professionalField">Field: {{professionalField}} </label></div>
+        {{!-- <div class="p-2"><a href="/mentee/{{id}}">Check the Mentee</a></div> --}}
+    </div>
+
+
+    <form action="/follow/{{_id}}" method="get">
+        <button type="submit">Follow</button>
+    </form>
+    {{/with}}
+
+</div>

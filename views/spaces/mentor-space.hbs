@@ -1,0 +1,182 @@
+{{#if user}}
+
+
+<div class="container" id="bootstrap-overrides">
+
+  {{!-- --------------------------NAV BAR----------------------- --}}
+  <div class="navbar">
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:white ;" id="mainNav">
+      <div class="container">
+
+        <label for="username" class="navbar-brand">Hello {{user.name}}! </label>
+        {{!-- <a class="navbar-brand" href="index.html">Edit Your Profile</a> --}}
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+          aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/mentor-edit">Edit Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/common-space">Commonspace</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Log Out</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+  {{!-- --------------LANDING WELLCOME---------------- --}}
+
+  {{!-- div for the main info container --}}
+  <div class="d-flex flex-column padding">
+
+    {{!-- div for the pic and --}}
+
+    <div id="padding">
+      <h1>Welcome to your personal Space.</h1>
+      <h3>Find your tech sisters here.</h3>
+    </div>
+
+
+    <div class="d-flex  justify-content-center" id="padding">
+
+      <div>
+        <div>
+          <div class="d-flex  justify-content-between align-items-center">
+
+            <div><img src="{{user.imgPath}}" id="display-image-user" class="border border-dark hover" width="70%">
+
+            </div>
+            <div id="followers-bnt">
+
+              {{!-- <button id="followers-bnt"> Followers: {{followers}}</button> --}}
+
+            </div>
+          </div>
+
+          <div class="p-2">
+            <h5 for="name">{{user.name}} {{user.surname}}</h5>
+
+          </div>
+
+        </div>
+
+
+        <div class="d-flex  justify-content-around">
+
+          <div class="p-2" id="bio-description">About Me: {{user.bioDescription}}</div>
+          <div class="p-2">
+
+            <div class="p-2"><label for="country">Location: {{user.country}}, {{user.city}} </label></div>
+            <div class="p-2"><label for="email">Email: {{user.email}} </label></div>
+            <div class="p-2"><label for="professionalField">Field: {{user.professionalField}} </label> </div>
+            <div class="p-2"> <label for="position-input">Position: {{user.position}} </label></div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="p-2">
+
+        <div>
+          <h4>Insights For Community</h4>
+        </div>
+        <p class="border border-dark hover" id="mentor-blog">
+
+          {{user.blog}}
+
+
+
+        </p>
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    {{!-- --------------MENTEE DISPLAY---------------- --}}
+
+
+    <div>
+      <h2>Meet Your Mentee</h2>
+    </div>
+
+    <div class="d-flex align-items-around border border-dark ">
+
+      {{#each mentees }}
+
+      <div class="d-flex flex-column align-items-around" id="user-display">
+        <div class="p-2">
+
+          <a href="/mentee/{{id}}"><img src="{{imgPath}}" id="display-image" id="image-container-round"
+              class="border border-dark hover2" width="70%"></a>
+        </div>
+        <div class="p-2"><label for="name">Name: {{name}} {{surname}} </label></div>
+        <div class="p-2"><label for="position-input">Position: {{position}} </label></div>
+        <div class="p-2"><label for="professionalField">Field: {{professionalField}} </label></div>
+
+      </div>
+
+
+
+      {{/each}}
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+<div class='foot' id="padding">
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+
+            {{!-- should display twitter and github logos with links --}}
+
+            <p class="copyright text-muted">Copyright © Women Of Tomorrow 2020</p>
+            <a href="https://humanetech.com/wp-content/uploads/2019/04/humane_design_worksheet.pdf">Built
+              With Humane Tech Tools</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+
+
+{{/if}}

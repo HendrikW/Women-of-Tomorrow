@@ -1,0 +1,456 @@
+body {
+  /* padding: 50px; */
+  font: 14px;
+  font-family: 'Roboto Mono', monospace;
+  box-sizing: border-box;
+}
+
+
+
+/* h1 {
+  font: 'Guyot Headline Bold'
+} */
+
+p {
+  font: 'Roboto Mono', monospace
+}
+
+/* recoomended by bootstrap documentation */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* recoomended by bootstrap documentation */
+
+
+a {
+  color: #e9d6d2;
+}
+
+
+
+/* /////////////////////LOGIN/SIGNUP */
+
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: 0.75rem;
+}
+
+.login,
+.image {
+  min-height: 100vh;
+}
+
+.bg-image {
+  background-image: url('/images/hugging.jpg');
+  /* background-color: chocolate; */
+  background-size: cover;
+  background-position: center;
+}
+
+.login-heading {
+  font-weight: 300;
+}
+
+.btn-login {
+  font: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+  color: #e9d6d2;
+  /* border-color: #e9d6d2 !important; */
+  outline: none;
+  border: none;
+}
+
+.signup {
+
+  font: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+  color: #e9d6d2;
+  /* border-color: #e9d6d2 !important; */
+  outline: none;
+  border: none !important;
+  border-color: #fff
+}
+
+.outline {
+  outline: none;
+}
+
+.btn-primary,
+.btn-primary:hover,
+
+.btn-primary:active,
+
+.btn-primary:visited,
+
+.btn-primary:focus {
+
+  color: #fff;
+  background-color: #e9d6d2;
+  outline: none
+}
+
+.btn-primary {
+
+  background-color: white;
+  color: #eec8c0;
+  outline: none
+}
+
+.btn-primary:active {
+  background-color: white;
+  color: #e9d6d2;
+  outline: none
+}
+
+
+.btn-primary:active:focus {
+  background-color: #8064A2;
+}
+
+
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+  height: auto;
+  /* border-radius: 2rem; */
+  border: none;
+  outline: none
+}
+
+.form-label-group>label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  cursor: text;
+  /* Match the input under the label */
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+  border: none;
+  outline: none
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+
+@supports (-ms-ime-align: auto) {
+  .form-label-group>label {
+    display: none;
+  }
+
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  .form-label-group>label {
+    display: none;
+  }
+
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+/* ========================= for Signup */
+
+.mentor-signup {
+
+
+  background-image: url('/images/mentor3.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+.mentee-signup {
+
+
+  background-image: url('/images/mentee6.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+/* /////////////////INDEX */
+
+#padding {
+  padding-top: 100px
+}
+
+.index-info {
+  width: 300px;
+  padding: 30px;
+  padding-bottom: 30px
+}
+
+.index-how-it-works {
+  /* text-align: center; */
+  box-align: center;
+}
+
+.index-pic {
+  width: 70%;
+  padding: 30px;
+
+}
+
+.signup {
+  color: #495057;
+}
+
+.hover:hover {
+  background-color: #e9d6d2;
+
+}
+
+
+.hover-m:hover {
+  background-color: #e9d6d2;
+}
+
+/* /////////////////// PROFILE EDIT */
+
+
+
+#edit-space {
+
+  font: 14px;
+  font-family: 'Roboto Mono', monospace;
+
+  box-sizing: border-box;
+
+}
+
+
+#bootstrap-overrides {
+
+  font: 14px;
+  font-family: 'Roboto Mono', monospace;
+  padding-bottom: 100px
+}
+
+
+#edit-image {
+
+
+  margin-right: 100px;
+  margin-top: 100px;
+  padding: 10px;
+  display: block;
+  width: 250px;
+  height: 250px;
+  object-fit: cover
+}
+
+/* ----------------------------------- SPACE */
+
+#display-image {
+  padding: 5px;
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover
+}
+
+
+#display-image-user {
+
+  padding: 5px;
+  display: block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover
+}
+
+
+
+#display {
+  background-color: #f3edea;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+
+#multi-display {
+
+  padding: 5px
+}
+
+
+.hover2:hover {
+  background-color: #ffffff;
+
+}
+
+
+.hover2-m:hover {
+  background-color: #ffffff;
+}
+
+#bio-description {
+  margin-top: 10px;
+  width: 400px;
+
+}
+
+
+#mentor-blog {
+  width: 400px;
+  height: 600px;
+  padding: 10px;
+  padding-bottom: 30px
+}
+
+
+#job-div {
+
+  margin: 10px
+}
+
+#jobs-btn {
+
+  margin-top: 40px;
+  padding: 0
+    /* background-color: #6b7e66 */
+
+}
+
+#user-display {
+
+  background-color: #fff;
+  margin: 10px;
+  width: 400px
+}
+
+#user-display:hover {
+
+  background-color: #fff;
+  border: solid black 1px;
+  margin: 10px;
+  width: 400px;
+  background-color: #f3edea;
+}
+
+
+
+/* ------------------------USER PROFILE - MENTEE VIEW - MENTOR VIEW -------------------------- */
+
+
+#user-profile {
+
+  font: 14px;
+  font-family: 'Roboto Mono', monospace;
+
+
+}
+
+/* ------------------------commonspace -------------------------- */
+
+
+#commonspace-blog {
+
+
+  min-width: 300px;
+  max-width: 900px;
+  min-height: 200px;
+  padding: 0px;
+
+  margin: 0px;
+
+}
+
+
+#blog-padding {
+  padding-top: 40px;
+
+}
+
+
+
+#zoom {
+  padding: 50px;
+  transition: transform .2s;
+  /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+#zoom:hover {
+  transform: scale(1.5);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+
+
+#link {
+  color: #495057;
+}
+
+#link:hover {
+  color: black;
+}

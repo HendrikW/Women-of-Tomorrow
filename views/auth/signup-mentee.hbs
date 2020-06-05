@@ -1,0 +1,156 @@
+{{!-- <h2>Signup Mentee</h2>
+
+<form action="/signup-mentee" method="post">
+
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name" placeholder="Alice">
+    <br><br>
+    <label for="surname">Surname</label>
+    <input id="surname" type="text" name="surname" placeholder="Paul">
+    <br><br>
+    <label for="username">Username</label>
+    <input id="username" type="text" name="username" placeholder="Mentee">
+    <br><br>
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password" placeholder="Your password">
+    <br><br>
+
+    <button type="submit">Create account</button>
+
+</form>
+
+  {{#if message}}
+  <div class="error-message">{{ message }}</div>
+  {{/if}}
+  <br><br>
+
+  //linked in sign up
+  <p> <a href=auth/linkedin>Login With linked</a> </p> <button>Create account</button>
+
+      <p class="account-message">
+        Do you already have an account?
+        <a href="/login">Login</a>
+      </p>
+</form> --}}
+
+{{!-- <!-- views/auth/signup.hbs -->
+
+<h2>Signup Mentor</h2>
+
+
+<ul> 
+
+
+
+<form action="/signup-mentor" method="POST" id="form-container">
+
+
+
+
+  <label for="username">Username</label>
+  <input id="username" type="text" name="username" placeholder="JonSnow">
+  <br>
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" placeholder="Your password">
+  <br>
+  <label for="name-input">Name</label>
+  <input id="name-input" type="text" name="name" placeholder="Your name">
+  <br>
+  <label for="surname-input">Surname</label>
+  <input id="surname-input" type="text" name="surname" placeholder="Your surname">
+
+  <button type="submit">Create account</button>
+  {{!-- <input type="submit"> --}}
+
+</form>
+
+
+{{!-- 
+{{#if message}}
+<div class="error-message">{{ message }}</div>
+{{/if}}
+<br><br>
+
+
+<p> <a href=auth/linkedin>Login With linked</a> </p> <p class="account-message">
+    Do you already have an account?
+    <a href="/login">Login</a>
+</p>
+</form> --}}
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+  <div class="row no-gutter">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image mentee-signup"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <h3 class="login-heading mb-4">Sign Up as Mentee</h3>
+
+
+
+              <form class="form-signin" action="/signup-mentee" method="POST">
+
+                <div class="form-label-group">
+                  <input name="username" type="text" id="inputUsername" class="form-control" placeholder="Username"
+                    required autofocus>
+                  <label for="inputUserame">Username</label>
+                </div>
+
+                <hr>
+
+                <div class="form-label-group">
+                  <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password"
+                    required>
+                  <label for="inputPassword">Password</label>
+                </div>
+                <hr>
+
+                <div class="form-label-group">
+                  <input name="name" type="text" id="inputName" class="form-control" placeholder="Name" required
+                    autofocus>
+                  <label for="inputName" class="outline">Name</label>
+                </div>
+                <hr>
+
+                <div class="form-label-group">
+                  <input name="surname" type="text" id="inputSurname" class="form-control" placeholder="Surname"
+                    required autofocus>
+                  <label for="inputSurname" class="outline">Surname</label>
+                </div>
+                <hr>
+
+                {{!-- <div class="form-label-group">
+                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+                <label for="inputConfirmPassword">Confirm password</label>
+              </div> --}}
+
+                <button class="rounded-0 btn btn-lg btn-primary btn-block text-uppercase signup"
+                  type="submit">Register</button>
+                <hr>
+                <a class="d-block text-center mt-4 small" href=auth/linkedin>Login With LinkedIn</a> <a
+                  class="d-block text-center mt-2 small" href="/login">Sign In</a>
+
+
+                {{!-- <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
+                  class="fab fa-google mr-2"></i> Sign up with Google</button>
+              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
+                  class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button> --}}
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

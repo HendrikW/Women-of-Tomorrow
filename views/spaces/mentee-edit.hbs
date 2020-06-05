@@ -1,0 +1,189 @@
+{{#if user}}
+
+<div class="container">
+
+  <div class="navbar">
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:white ;" id="mainNav">
+      <div class="container">
+
+        <label for="username" class="navbar-brand">Hello {{user.name}}! </label>
+        {{!-- <a class="navbar-brand" href="index.html">Edit Your Profile</a> --}}
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+          aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/mentee-space">Your Space</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/common-space">Commonspace</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Log Out</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+
+
+
+
+
+  <div class="padding">
+
+
+    <div class=" d-flex justify-content-around ">
+
+
+      <div>
+        <img src="{{user.imgPath}}" id="edit-image" class="border border-dark hover" width="70%">
+      </div>
+
+
+      <div class="container" id="bootstrap-overrides">
+
+
+
+
+        <form class="justify-content-around form-update " action="/mentee-edit" method="POST"
+          enctype="multipart/form-data">
+          <div>
+            <div class="form-group row">
+
+              <label class=' col-form-label text-left'> Update Your
+                Profile Picture </label></div>
+            <div><input type="file" name="photo" value={{user.imgPath}} required></div>
+          </div>
+          <hr>
+          <div class="form-group row">
+            <label for="inputusername" class="col-sm-2 col-form-label text-right">Username</label>
+            <div class="col-md-6">
+              <input name="username" type="text" class="rounded-0 form-control" id="inputusername edit-space"
+                value={{user.username}}>
+            </div>
+          </div>
+
+
+          <div class="form-group row">
+            <label for="inputname" class="col-sm-2 col-form-label text-right">Name</label>
+            <div class="col-md-6">
+              <input name="name" type="text" class="form-control rounded-0" id="inputname" value={{user.name}}>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputsurname" class="col-sm-2 col-form-label text-right">Surname</label>
+            <div class="col-md-6">
+              <input name="surname" type="text" class="rounded-0 form-control" id="inputsurname" value={{user.surname}}>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputEmail" class="col-sm-2 col-form-label text-right">Email</label>
+            <div class="col-md-6">
+              <input name="email" type="email" class="rounded-0 form-control" id="inputEmail" value={{user.email}}>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputphone" class="col-sm-2 col-form-label text-right">Phone</label>
+            <div class="col-md-6">
+              <input name="phone" type="number" class="rounded-0 form-control" id="inputphone" value={{user.phone}}>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputCountry" class="col-sm-2 col-form-label text-right">Country</label>
+            <div class="col-md-6">
+              <input name="country" type="text" class="rounded-0 form-control" id="inputCountry" value={{user.country}}>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputcity" class="col-sm-2 col-form-label text-right">City</label>
+            <div class="col-md-6">
+              <input name="city" type="text" class="rounded-0 form-control" id="inputcity" value={{user.city}}>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="inputposition" class="col-sm-2 col-form-label text-right">Position</label>
+            <div class="col-md-6">
+              <input name="position" type="text" class="rounded-0 form-control" id="inputposition"
+                value={{user.position}}>
+            </div>
+          </div>
+
+
+
+          <div class="form-group row">
+
+            <label for="professionalField" class="col-sm-2 col-form-label text-right">Field</label>
+
+
+            <div class="col-md-6 rounded-0">
+              <select class="form-control " id="professionalField" name="professionalField"
+                value={{user.professionalField}}>
+                <option id="professionalField" name="professionalField" value="Web-development">Web-development
+                </option>
+                <option id="professionalField" name="professionalField" value="UX/UI">UX/UI</option>
+                <option id="professionalField" name="professionalField" value="Product Management">Product
+                  Management
+                </option>
+                <option id="professionalField" name="professionalField" value="Data Science">Data Science</option>
+                {{!-- <input id="professionalField" type="text" name="professionalField" value={{user.professionalField}}> --}}
+              </select>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="form-group row">
+            <label for="bioDescription-input" class="col-sm-2 col-form-label text-right">Your Bio</label>
+            <div class="col-md-6">
+              <textarea name="bioDescription" class="rounded-0 form-control" id="bioDescription-input"
+                value={{user.bioDescription}} rows="3"> {{user.bioDescription}}</textarea>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="menteeBlog-input" class="col-sm-2 col-form-label text-right"> Current Focus </label>
+            <div class="col-md-6">
+              <textarea name="menteeBlog" class="rounded-0 form-control" id="menteeBlog-input" value={{user.menteeBlog}}
+                rows="3" required>{{user.menteeBlog}} </textarea>
+            </div>
+          </div>
+
+
+          <div class="form-group row ">
+            <div class="col-md-6 offset-sm-2">
+              <button type="submit" class="btn btn-outline-secondary rounded-0 col-md-12">Update</button>
+            </div>
+          </div>
+
+
+        </form>
+
+      </div>
+
+
+    </div>
+
+
+
+
+    {{/if}}
