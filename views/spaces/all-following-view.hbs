@@ -1,0 +1,16 @@
+
+
+
+{{#if user}} 
+{{!-- <form class="justify-content-around form-update " action="/all-following/{{id}}" method="GET"> --}}
+<h2>List of mentors</h2>
+
+{{#each user}}
+<br><br>
+<label for = "_followers">Following: {{_followers}}</label>
+<br><br>
+<label for = "name">Name: {{name}}</label>
+<br><br>
+{{/each}}
+{{!-- </form> --}}
+{{/if}}
